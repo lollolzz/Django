@@ -15,4 +15,5 @@ class Post(models.Model):
         return f'[{self.pk}] {self.title}'
         # {}만 의미를 가지고 [], () 들은 그대로 출력된다.
 
-# Create your models here.
+    def get_absolute_url(self):
+        return f'/blog/{self.pk}/'
